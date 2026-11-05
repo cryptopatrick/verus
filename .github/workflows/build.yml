@@ -21,8 +21,6 @@ permissions:
 
 jobs:
   build:
-    if: github.repository == 'verus-lang/verus'
-
     strategy:
       matrix:
         build: [macos, macos-x86_64, linux, linux-arm64, windows, windows-arm64]

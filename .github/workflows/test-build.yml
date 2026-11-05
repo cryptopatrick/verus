@@ -1,0 +1,13 @@
+
+name: Test release build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+    with:
+      checkout_ref: ${{ github.sha }}
+      is_rolling: false
+
